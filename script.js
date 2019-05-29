@@ -24,3 +24,46 @@ function validateEmail(email){
 console.log("Email: yellow.com is " + validateEmail("yellow.com"));
 console.log("Email: 1510927@iub.edu.bd is " + validateEmail("1510927@iub.edu.bd"));
 console.log("Email: rifatmahmud196@gmail.com is " + validateEmail("rifatmahmud196@gmail.com"));
+
+var company = {
+    name: "Google", 
+    age: 19, 
+    ceo: {
+    first_name: "Sundar", 
+    last_name: "Pichai"
+    }
+    };
+
+    company.updateAge = function (newAge) {
+        this.age = newAge;
+    }
+
+    company.updateAge(23);
+    console.log(company["age"])
+
+    //Task 4: Access Object status at a specified index of array
+
+    var library = [ 
+        {
+            author: 'Bill Gates',
+            title: 'The Road Ahead',
+            readingStatus: true
+        },
+        {
+            author: 'Steve Jobs',
+            title: 'Walter Isaacson',
+            readingStatus: true
+        },
+        {
+            author: 'Suzanne Collins',
+            title:  'Mockingjay: The Final Book of The Hunger Games', 
+            readingStatus: false
+        }];
+
+        
+library.readingStatus = function (index) {
+    return library[index].readingStatus;
+}
+
+console.log(library.readingStatus(2))
+
