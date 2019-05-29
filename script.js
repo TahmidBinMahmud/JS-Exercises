@@ -67,3 +67,55 @@ library.readingStatus = function (index) {
 
 console.log(library.readingStatus(2))
 
+//Task 5a: Add a new item
+
+var cart = [ 
+    {
+        name: 'Shoes',
+        price: 560,
+        quantity: 4
+    },
+    {
+        name: 'Regular Tees',
+        price: 455.50,
+        quantity: 6
+    },
+    {
+        name: 'Socks',
+        price: 65.99,
+        quantity: 2
+    }];
+
+function addItem(newItem){
+    cart.push(newItem);
+}
+
+addItem({
+    name: 'Pants',
+    price: 29.99,
+    quantity: 10
+})
+
+console.log(cart)
+
+//Task 5b: Sort by a given property
+
+function sortCart(prop){
+    cart.sort(function(a, b){
+        return a[prop] > b[prop];
+    })
+}
+
+console.log('name')
+
+//Task 5c: Find Item by name
+
+function findByName(name){
+
+}
+
+//Task 5d: Get total cost
+
+function getTotalCost() {
+
+}
