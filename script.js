@@ -96,26 +96,50 @@ addItem({
     quantity: 10
 })
 
+addItem({
+    name: 'Shoes',
+    price: 49.99,
+    quantity: 15
+})
+
 console.log(cart)
 
 //Task 5b: Sort by a given property
 
 function sortCart(prop){
     cart.sort(function(a, b){
-        return a[prop] > b[prop];
+        if (a[prop] < b[prop]){
+            return -1;
+        }
+        if (a[prop] > b[prop]){
+            return 1;
+        }
+        return 0;
     })
 }
 
-console.log('name')
+sortCart('quantity')
+console.log(cart)
 
 //Task 5c: Find Item by name
 
-function findByName(name){
+var filteredCart = {}
 
+function findByName(searchName){
+    cart.forEach(function(index){
+
+    });
 }
 
 //Task 5d: Get total cost
 
-function getTotalCost() {
+var totalCost = null
 
+function getTotalCost() {
+    cart.forEach(function(value, index, arry){
+        totalCost += value.price;
+       });
 }
+
+getTotalCost()
+console.log(totalCost)
