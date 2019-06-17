@@ -122,11 +122,16 @@ sortCart('quantity')
 console.log(cart)
 
 //Task 5c: Find Item by name
+
+findByName = function(name){
 var newArr =  cart.filter(function(item) {
-    return item.name == "Shoes";
+    return item.name == name;
 });
 
 console.log(newArr)
+}
+
+findByName("Shoes")
 
 //Task 5d: Get total cost
 
