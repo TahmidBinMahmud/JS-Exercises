@@ -139,9 +139,9 @@ var totalCost = null
 
 function getTotalCost() {
     cart.forEach(function(value, index, arry){
-        totalCost += value.price;
+        totalCost += value.price * value.quantity;
        });
 }
 
 getTotalCost()
-console.log(totalCost)
+console.log("Total Cost of all items on the cart: " + totalCost)
