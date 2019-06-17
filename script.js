@@ -122,14 +122,11 @@ sortCart('quantity')
 console.log(cart)
 
 //Task 5c: Find Item by name
+var newArr =  cart.filter(function(item) {
+    return item.name == "Shoes";
+});
 
-var filteredCart = {}
-
-function findByName(searchName){
-    cart.forEach(function(index){
-
-    });
-}
+console.log(newArr)
 
 //Task 5d: Get total cost
 
